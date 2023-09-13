@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/index.css" />
+  </head>
+  <body>
+    <section class="containerLogin">
+      <form action="" id="formLogin">
+        <h1>Log in</h1>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="jane@example.com"
+          required
+        />
+        <div class="passwordInput">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="••••••••••••"
+            required
+          />
+          <i class="fa-regular fa-eye-slash" id="eyeIcon"></i>
+        </div>
+        <button>LOG IN</button>
+        <p class="error" id="error">email or password incorrect!</p>
+      </form>
+    </section>
+    <script src="./js/fetchData.js"></script>
+    <script src="./js/index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c119554024.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

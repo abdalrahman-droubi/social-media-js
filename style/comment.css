@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    /* background-color: #cfcfcf; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  hr {
+    height: 0.25px;
+    width: 375px;
+    position: relative;
+    right: 35px;
+    background-color: #acacac;
+  }
+  .containerComment {
+    max-width: 375px;
+    height: 822px;
+    margin: 50px auto;
+    padding: 0 32px 0 32px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
+  .containerComment h1 {
+    color: #000;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  
+  .containerComment .title {
+    color: #000;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 35px;
+  }
+  
+  .post {
+    margin: 35px 0;
+    position: relative;
+  }
+
+  .post .userInfoheader .seeComment a{
+      color: rgba(0, 0, 0, 0.8);
+      font-size: 12px;
+      font-weight: 400;
+      cursor: pointer;
+      text-decoration: none;
+  }
+  .post .userInfo {
+    width: 139px;
+    height: 28px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .post .userInfo p {
+    color: #000;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .post .userInfo span {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 11px;
+    font-weight: 400;
+  }
+  
+  .post .postContant {
+    margin-top: 32px;
+    padding-bottom: 25px;
+    color: #000;
+    font-weight: 400;
+    letter-spacing: 0.15px;
+  }
+  .post .commentContant {
+    margin-top: 10px;
+    padding-bottom: 25px;
+    color: #000;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.15px;
+    border-bottom: 0.25px solid #acacac;
+  }
+  .post .addComment {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .containerComment .addPost {
+    position: sticky;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: white;
+  }
+  .containerComment .addPost img {
+    cursor: pointer;
+  }
+  
