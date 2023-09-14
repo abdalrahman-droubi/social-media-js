@@ -1,6 +1,5 @@
 const posts = document.getElementById("posts");
-const addPostBtn = document.getElementById("addPost");
-const userLogin = JSON.parse(localStorage.getItem("userData")) ? true : false;
+const isuserLogin = JSON.parse(localStorage.getItem("userData")) ? true : false;
 
 const handlePostData = async () => {
   const postData = await fetchData("posts");
@@ -43,7 +42,7 @@ const renderPost = (postsWithUserData) => {
                            <div class="postContant">
                            <h4>${post.title}</h4>
                            ${post.body}</div>
-                           <div class="addComment" id="addComment">
+                           <div class="addComment" id="addComment" >
                              <img src="../assets/icon/comment.svg" alt="" width="28px" height="28px" />
                              Add Comment...
                            </div>`;
@@ -52,4 +51,4 @@ const renderPost = (postsWithUserData) => {
   });
 };
 
-userLogin ? handlePostData() : (location.replace("../index.html"));
+isuserLogin ? handlePostData() : location.replace("../index.html");

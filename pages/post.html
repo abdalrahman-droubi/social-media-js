@@ -10,13 +10,33 @@
     <section class="containerPost">
       <h1>Discover</h1>
       <p class="title">What’s new today</p>
-      <div id="posts">
-      </div>
+      <div id="posts"></div>
       <div class="addPost" id="addPost">
-        <img src="../assets/icon/addPost.svg" alt="" />
+        <img src="../assets/icon/addPost.svg" alt="" onclick="openPopup()" />
       </div>
     </section>
+    <div class="overlay" id="popup">
+      <div class="popup">
+        <h1>Enter Title and Content</h1>
+        <form  id="addPostForm">
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" /><br /><br />
+
+          <label for="content">Content:</label><br />
+          <textarea id="content" name="content" rows="4" cols="50"></textarea
+          ><br /><br />
+          <button class="popup-button" type="submit">
+            Submit
+          </button>
+          <button class="popup-button" type="button" onclick="closePopup()">
+            Close
+          </button>
+        </form>
+      </div>
+    </div>
     <script src="../js/fetchData.js"></script>
-    <script src="../js/post.js"></script> 
+    <script src="../js/postData.js"></script>
+    <script src="../js/addPost&comment.js"></script>
+    <script src="../js/post.js"></script>
   </body>
 </html>

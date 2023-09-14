@@ -10,7 +10,7 @@ const handleCommentData = async () => {
   renderComment(commentData);
 };
 const renderPost = (userData, postData) => {
-  post.innerHTML = `        <div class = "post">     
+  post.innerHTML = `<div class = "post">     
                            <div class = "userInfo">
                                <img
                                src="../assets/images/810-8105444_male-placeholder.png"
@@ -26,7 +26,7 @@ const renderPost = (userData, postData) => {
                            <div class="postContant">
                            <h4>${postData.title}</h4>
                            ${postData.body}</div>
-                           <div class="addComment" id="addComment">
+                           <div class="addComment" id="addComment" onclick="openPopup()">
                            <img src="../assets/icon/comment.svg" alt="" width="28px" height="28px" />
                            Add Comment...
                          </div>
@@ -39,23 +39,19 @@ const renderPost = (userData, postData) => {
 
 const renderComment = (commentData) => {
   const commentContainer = document.getElementById("commentContainer");
-  console.log(commentContainer);
   commentData.map((comment, index) => {
     const commentElement = document.createElement("div");
     const vector = document.createElement("hr");
-    commentElement.classList.add("post");
+    commentElement.classList.add("comment");
     commentElement.innerHTML = ` 
-                               <div class = "userInfo">
+                               <div class = "userInfoComment">
                                  <img
                                  src="../assets/images/810-8105444_male-placeholder.png"
                                  alt=""
                                  width="28px"
                                  height="28px"
                                />
-                               <div>
-                                 <p></p>
                                  <span>${comment.email}</span>
-                               </div>
                                </div>
                              <div class="commentContant">
                              <h4>${comment.name}</h4>   
