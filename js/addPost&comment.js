@@ -1,7 +1,7 @@
 const userData = JSON.parse(localStorage.getItem("userData"));
 const addPostForm = document.getElementById("addPostForm");
 const pathname = location.pathname;
-
+const [params1, isAddComment] = location.search.split("&");
 
 const openPopup = () => {
   document.getElementById("popup").style.display = "flex";
@@ -31,7 +31,7 @@ addPostForm.addEventListener("submit", async (e) => {
     });
     renderNewComment(newComment);
   }
-  closePopup();
+  closePopup(); 
   e.target.reset();
 });
 
@@ -61,16 +61,16 @@ const renderNewPost = (newPost) => {
                                <img src="../assets/icon/comment.svg" alt="" width="28px" height="28px" />
                                Add Comment...
                              </div>`;
-  posts.prepend(postElement);
-  posts.prepend(vector);
-};
 
+  posts.prepend(vector);
+  posts.prepend(postElement);
+};
 
 const renderNewComment = (newComment) => {
   const commentContainer = document.getElementById("commentContainer");
-    const commentElement = document.createElement("div");
-    commentElement.classList.add("comment");
-    commentElement.innerHTML = ` 
+  const commentElement = document.createElement("div");
+  commentElement.classList.add("comment");
+  commentElement.innerHTML = ` 
                                <div class = "userInfoComment">
                                  <img
                                  src="../assets/images/810-8105444_male-placeholder.png"
@@ -84,5 +84,6 @@ const renderNewComment = (newComment) => {
                              <h4>${newComment.name}</h4>   
                              ${newComment.body}
                              </div>`;
-    commentContainer.prepend(commentElement);
+  commentContainer.prepend(commentElement);
 };
+isAddComment ? openPopup() : null;

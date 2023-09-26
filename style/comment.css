@@ -95,14 +95,14 @@ hr {
 
 
 .comment {
-  margin: 35px 0;
+  margin: 10px 0;
   position: relative;
 }
 .comment .userInfoComment {
   width: 139px;
   height: 28px;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
 }
 .comment .userInfoComment span {

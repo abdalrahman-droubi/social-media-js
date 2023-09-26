@@ -1,4 +1,5 @@
-const postId = location.search.slice().split("=")[1];
+const params = location.search.split("&")
+const postId = params[0].split("=")[1];
 const post = document.getElementById("post");
 const userLogin = JSON.parse(localStorage.getItem("userData")) ? true : false;
 

@@ -9,7 +9,7 @@ const handlePostData = async () => {
     usersDict[user.id] = { name: user.name, username: user.username };
   });
 
-  const postsWithUserData = postData.map((post) => ({
+  const postsWithUserData = postData?.map((post) => ({
     ...post,
     user: {
       name: usersDict[post.userId].name,
@@ -20,7 +20,7 @@ const handlePostData = async () => {
 };
 
 const renderPost = (postsWithUserData) => {
-  postsWithUserData.map((post) => {
+  postsWithUserData?.map((post) => {
     const postElement = document.createElement("div");
     const vector = document.createElement("hr");
     postElement.classList.add("post");
@@ -42,10 +42,12 @@ const renderPost = (postsWithUserData) => {
                            <div class="postContant">
                            <h4>${post.title}</h4>
                            ${post.body}</div>
-                           <div class="addComment" id="addComment" >
+                           <a href="../pages/comment.html?postId=${post.id}&addComment">
+                           <div class="addComment" id="addComment">
                              <img src="../assets/icon/comment.svg" alt="" width="28px" height="28px" />
                              Add Comment...
-                           </div>`;
+                           </div>
+                           </a>`;
     posts.appendChild(postElement);
     posts.appendChild(vector);
   });
